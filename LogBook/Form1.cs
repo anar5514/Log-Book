@@ -19,58 +19,62 @@ namespace LogBook
 
         private void LogBook_Load(object sender, EventArgs e)
         {
-            metroComboBox1.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox2.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox3.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox4.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox5.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox6.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox7.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox8.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox9.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox10.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox11.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox12.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox13.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox14.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox15.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-            metroComboBox16.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
-
-        }
-
-        private void metroRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            if (metroRadioButton.Checked)
+            Student[] students = new Student[8]
             {
-                metroRadioButton4.Checked = true;
-                metroRadioButton7.Checked = true;
-                metroRadioButton10.Checked = true;
-                metroRadioButton13.Checked = true;
-                metroRadioButton16.Checked = true;
-                metroRadioButton19.Checked = true;
-                metroRadioButton22.Checked = true;
-                metroRadioButton25.Checked = true;
-            }         
+                new Student{Fullname = "Abdullabayli Saleh", LastSeen = "21.01.2019", Absent = true, Top = 125},
+                new Student{Fullname = "Ahmadov Anar", LastSeen = "20.01.2019", Absent = true,Top = 190},
+                new Student{Fullname = "Jamalzade Elvin", LastSeen = "20.01.2019", Absent = true,Top = 255},
+                new Student{Fullname = "Mustafayev Nurullah", LastSeen = "20.01.2019", Absent = true,Top = 320},
+                new Student{Fullname = "Mustafayev Tural", LastSeen = "20.01.2019", Absent = true,Top = 385},
+                new Student{Fullname = "Naghiyev Elshan", LastSeen = "20.01.2019", Absent = true,Top = 450},
+                new Student{Fullname = "Omarov Islam", LastSeen = "20.01.2019", Absent = true,Top = 515},
+                new Student{Fullname = "Osmanov Samir", LastSeen = "20.01.2019", Absent = true,Top = 580}
+            };
+
+            //foreach (var student in students)
+            //{
+            //    student.ControlWorkMark = false;
+            //    student.PracticeWorkMark = false;
+            //    student.NumberStudent = students.
+            //}
+
+            for (int i = 0; i < students.Count(); i++)
+            {
+                students[i].ControlWorkMark = false;
+                students[i].PracticeWorkMark = false;
+                students[i].NumberStudent = i + 1;
+            }
+
+            label1.BackColor = Color.FromArgb(227, 245, 255);
+            label1.ForeColor = Color.FromArgb(154, 199, 227);
+            label2.BackColor = Color.FromArgb(227, 245, 255);
+            label2.ForeColor = Color.FromArgb(154, 199, 227);
+            label3.BackColor = Color.FromArgb(227, 245, 255);
+            label3.ForeColor = Color.FromArgb(154, 199, 227);
+            label4.BackColor = Color.FromArgb(227, 245, 255);
+            label4.ForeColor = Color.FromArgb(154, 199, 227);
+            label5.BackColor = Color.FromArgb(227, 245, 255);
+            label5.ForeColor = Color.FromArgb(154, 199, 227);
+            label7.BackColor = Color.FromArgb(227, 245, 255);
+            label7.ForeColor = Color.FromArgb(154, 199, 227);
+            label8.BackColor = Color.FromArgb(227, 245, 255);
+            label8.ForeColor = Color.FromArgb(154, 199, 227);
+            label6.BackColor = Color.FromArgb(227, 245, 255);
+            label6.ForeColor = Color.FromArgb(154, 199, 227);
+            signAll.BackColor = Color.FromArgb(227, 245, 255);
+
+            this.Controls.AddRange(students);
+
         }
 
-        private void metroRadioButton1_CheckedChanged(object sender, EventArgs e)
+        private void signAll_CheckedChanged(object sender, EventArgs e)
         {
-            metroComboBox1.Enabled = true;
-            metroComboBox2.Enabled = true;
-            metroComboBox3.Enabled = true;
-            metroComboBox4.Enabled = true;
-            metroComboBox5.Enabled = true;
-            metroComboBox6.Enabled = true;
-            metroComboBox7.Enabled = true;
-            metroComboBox8.Enabled = true;
-            metroComboBox9.Enabled = true;
-            metroComboBox10.Enabled = true;
-            metroComboBox11.Enabled = true;
-            metroComboBox12.Enabled = true;
-            metroComboBox13.Enabled = true;
-            metroComboBox14.Enabled = true;
-            metroComboBox15.Enabled = true;
-            metroComboBox16.Enabled = true;
+            //foreach (var student in this.Controls.Find("Student", true) as Student[])
+            //{
+            //    student = new Student();
+            //    student.Participates = true;
+            //}
+
         }
     }
 }
