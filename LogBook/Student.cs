@@ -52,5 +52,14 @@ namespace LogBook
                 PracticeWorkMark = false;
             }
         }
+
+        private void absent_CheckedChanged(object sender, EventArgs e)
+        {
+            if (absent.Checked)
+            {
+                controlWorkMark.SelectedItem = null;
+                practiceWorkMark.SelectedItem = null;
+            }           
+        }
     }
 }

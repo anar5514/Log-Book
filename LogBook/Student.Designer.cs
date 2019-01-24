@@ -40,13 +40,13 @@
             this.threeCrystal = new System.Windows.Forms.PictureBox();
             this.oneCrystal = new System.Windows.Forms.PictureBox();
             this.numberStudent = new System.Windows.Forms.Label();
-            this.studentPhoto = new System.Windows.Forms.PictureBox();
             this.commentForStudent = new System.Windows.Forms.PictureBox();
+            this.studentPhoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.twoCrystal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.threeCrystal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oneCrystal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commentForStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // absent
@@ -62,6 +62,7 @@
             this.absent.TabStop = true;
             this.absent.Text = " ";
             this.absent.UseVisualStyleBackColor = false;
+            this.absent.CheckedChanged += new System.EventHandler(this.absent_CheckedChanged);
             // 
             // delayed
             // 
@@ -169,17 +170,6 @@
             this.numberStudent.TabIndex = 72;
             this.numberStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // studentPhoto
-            // 
-            this.studentPhoto.Image = global::LogBook.Properties.Resources.user;
-            this.studentPhoto.InitialImage = null;
-            this.studentPhoto.Location = new System.Drawing.Point(44, 19);
-            this.studentPhoto.Name = "studentPhoto";
-            this.studentPhoto.Size = new System.Drawing.Size(35, 27);
-            this.studentPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.studentPhoto.TabIndex = 68;
-            this.studentPhoto.TabStop = false;
-            // 
             // commentForStudent
             // 
             this.commentForStudent.ErrorImage = null;
@@ -191,6 +181,17 @@
             this.commentForStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.commentForStudent.TabIndex = 73;
             this.commentForStudent.TabStop = false;
+            // 
+            // studentPhoto
+            // 
+            this.studentPhoto.Image = global::LogBook.Properties.Resources.user;
+            this.studentPhoto.InitialImage = null;
+            this.studentPhoto.Location = new System.Drawing.Point(44, 19);
+            this.studentPhoto.Name = "studentPhoto";
+            this.studentPhoto.Size = new System.Drawing.Size(35, 27);
+            this.studentPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.studentPhoto.TabIndex = 68;
+            this.studentPhoto.TabStop = false;
             // 
             // Student
             // 
@@ -217,8 +218,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.twoCrystal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.threeCrystal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oneCrystal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commentForStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

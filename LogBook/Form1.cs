@@ -21,22 +21,15 @@ namespace LogBook
         {
             Student[] students = new Student[8]
             {
-                new Student{Fullname = "Abdullabayli Saleh", LastSeen = "21.01.2019", Absent = true, Top = 125},
-                new Student{Fullname = "Ahmadov Anar", LastSeen = "20.01.2019", Absent = true,Top = 190},
-                new Student{Fullname = "Jamalzade Elvin", LastSeen = "20.01.2019", Absent = true,Top = 255},
-                new Student{Fullname = "Mustafayev Nurullah", LastSeen = "20.01.2019", Absent = true,Top = 320},
-                new Student{Fullname = "Mustafayev Tural", LastSeen = "20.01.2019", Absent = true,Top = 385},
-                new Student{Fullname = "Naghiyev Elshan", LastSeen = "20.01.2019", Absent = true,Top = 450},
-                new Student{Fullname = "Omarov Islam", LastSeen = "20.01.2019", Absent = true,Top = 515},
-                new Student{Fullname = "Osmanov Samir", LastSeen = "20.01.2019", Absent = true,Top = 580}
+                new Student{Fullname = "Abdullabayli Saleh", LastSeen = "21.01.2019", Absent = true, Top = 160},
+                new Student{Fullname = "Ahmadov Anar", LastSeen = "20.01.2019", Absent = true,Top = 225},
+                new Student{Fullname = "Jamalzade Elvin", LastSeen = "20.01.2019", Absent = true,Top = 290},
+                new Student{Fullname = "Mustafayev Nurullah", LastSeen = "20.01.2019", Absent = true,Top = 355},
+                new Student{Fullname = "Mustafayev Tural", LastSeen = "20.01.2019", Absent = true,Top = 420},
+                new Student{Fullname = "Naghiyev Elshan", LastSeen = "20.01.2019", Absent = true,Top = 485},
+                new Student{Fullname = "Omarov Islam", LastSeen = "20.01.2019", Absent = true,Top = 550},
+                new Student{Fullname = "Osmanov Samir", LastSeen = "20.01.2019", Absent = true,Top = 615}
             };
-
-            //foreach (var student in students)
-            //{
-            //    student.ControlWorkMark = false;
-            //    student.PracticeWorkMark = false;
-            //    student.NumberStudent = students.
-            //}
 
             for (int i = 0; i < students.Count(); i++)
             {
@@ -75,6 +68,16 @@ namespace LogBook
             //    student.Participates = true;
             //}
 
+        }
+
+        private void iconPen_Click(object sender, EventArgs e)
+        {
+            TextBox textBox = new TextBox();
+            textBox.Size = new Size(50, 30);
+            textBox.Location = iconPen.Location;
+            //textBox.Location = iconPen.Location.X + 50;
+            //textBox.
+            this.Controls.Add(textBox);
         }
     }
 }
