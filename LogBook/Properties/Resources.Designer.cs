@@ -63,9 +63,9 @@ namespace LogBook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pen {
+        internal static System.Drawing.Bitmap comment {
             get {
-                object obj = ResourceManager.GetObject("pen", resourceCulture);
+                object obj = ResourceManager.GetObject("comment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace LogBook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pen2 {
+        internal static System.Drawing.Bitmap pen {
             get {
-                object obj = ResourceManager.GetObject("pen2", resourceCulture);
+                object obj = ResourceManager.GetObject("pen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

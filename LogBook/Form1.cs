@@ -58,6 +58,9 @@ namespace LogBook
 
             this.Controls.AddRange(students);
 
+            iconPen.Image = Properties.Resources.pen;
+            iconPen.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
 
         private void signAll_CheckedChanged(object sender, EventArgs e)

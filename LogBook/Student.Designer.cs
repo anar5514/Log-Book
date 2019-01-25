@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
             this.absent = new MetroFramework.Controls.MetroRadioButton();
             this.delayed = new MetroFramework.Controls.MetroRadioButton();
             this.participates = new MetroFramework.Controls.MetroRadioButton();
@@ -173,7 +172,7 @@
             // commentForStudent
             // 
             this.commentForStudent.ErrorImage = null;
-            this.commentForStudent.Image = ((System.Drawing.Image)(resources.GetObject("commentForStudent.Image")));
+            this.commentForStudent.Image = global::LogBook.Properties.Resources.comment;
             this.commentForStudent.InitialImage = null;
             this.commentForStudent.Location = new System.Drawing.Point(1350, 18);
             this.commentForStudent.Name = "commentForStudent";

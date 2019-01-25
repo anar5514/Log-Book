@@ -102,9 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\user.png" />
-    <None Include="bin\Debug\person.png" />
     <None Include="bin\Debug\pen.png" />
-    <None Include="bin\Debug\pen2.png" />
+    <None Include="bin\Debug\comment.PNG" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>

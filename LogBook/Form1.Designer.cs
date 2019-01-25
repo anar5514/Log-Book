@@ -210,7 +210,7 @@
             // 
             // iconPen
             // 
-            this.iconPen.Image = global::LogBook.Properties.Resources.pen2;
+            this.iconPen.Image = global::LogBook.Properties.Resources.pen;
             this.iconPen.Location = new System.Drawing.Point(816, 48);
             this.iconPen.Name = "iconPen";
             this.iconPen.Size = new System.Drawing.Size(24, 24);

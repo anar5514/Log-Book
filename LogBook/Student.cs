@@ -37,6 +37,8 @@ namespace LogBook
             controlWorkMark.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
             practiceWorkMark.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
 
+            studentPhoto.Image = Properties.Resources.user;
+            studentPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void ParticipatesOrDelayed_CheckedChanged(object sender, EventArgs e)
