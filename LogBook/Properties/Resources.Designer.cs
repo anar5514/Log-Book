@@ -63,26 +63,6 @@ namespace LogBook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap comment {
-            get {
-                object obj = ResourceManager.GetObject("comment", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap crystal {
-            get {
-                object obj = ResourceManager.GetObject("crystal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap enabledcrystal {
             get {
                 object obj = ResourceManager.GetObject("enabledcrystal", resourceCulture);
@@ -93,39 +73,9 @@ namespace LogBook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pen {
+        internal static System.Drawing.Bitmap enabledcrystal1 {
             get {
-                object obj = ResourceManager.GetObject("pen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pen1 {
-            get {
-                object obj = ResourceManager.GetObject("pen1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap person {
-            get {
-                object obj = ResourceManager.GetObject("person", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap xicon {
-            get {
-                object obj = ResourceManager.GetObject("xicon", resourceCulture);
+                object obj = ResourceManager.GetObject("enabledcrystal1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

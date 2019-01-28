@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
             this.absent = new MetroFramework.Controls.MetroRadioButton();
             this.delayed = new MetroFramework.Controls.MetroRadioButton();
             this.participates = new MetroFramework.Controls.MetroRadioButton();
@@ -134,6 +135,7 @@
             // 
             this.twoCrystal.Enabled = false;
             this.twoCrystal.ErrorImage = null;
+            this.twoCrystal.Image = ((System.Drawing.Image)(resources.GetObject("twoCrystal.Image")));
             this.twoCrystal.InitialImage = null;
             this.twoCrystal.Location = new System.Drawing.Point(1218, 19);
             this.twoCrystal.Name = "twoCrystal";
@@ -147,6 +149,7 @@
             // 
             this.threeCrystal.Enabled = false;
             this.threeCrystal.ErrorImage = null;
+            this.threeCrystal.Image = ((System.Drawing.Image)(resources.GetObject("threeCrystal.Image")));
             this.threeCrystal.InitialImage = null;
             this.threeCrystal.Location = new System.Drawing.Point(1249, 19);
             this.threeCrystal.Name = "threeCrystal";
@@ -160,6 +163,7 @@
             // 
             this.oneCrystal.Enabled = false;
             this.oneCrystal.ErrorImage = null;
+            this.oneCrystal.Image = ((System.Drawing.Image)(resources.GetObject("oneCrystal.Image")));
             this.oneCrystal.InitialImage = null;
             this.oneCrystal.Location = new System.Drawing.Point(1187, 19);
             this.oneCrystal.Name = "oneCrystal";
@@ -191,6 +195,7 @@
             // 
             // studentPhoto
             // 
+            this.studentPhoto.Image = ((System.Drawing.Image)(resources.GetObject("studentPhoto.Image")));
             this.studentPhoto.InitialImage = null;
             this.studentPhoto.Location = new System.Drawing.Point(44, 19);
             this.studentPhoto.Name = "studentPhoto";
@@ -203,6 +208,7 @@
             // 
             this.xIcon.Enabled = false;
             this.xIcon.ErrorImage = null;
+            this.xIcon.Image = ((System.Drawing.Image)(resources.GetObject("xIcon.Image")));
             this.xIcon.InitialImage = null;
             this.xIcon.Location = new System.Drawing.Point(1280, 19);
             this.xIcon.Name = "xIcon";

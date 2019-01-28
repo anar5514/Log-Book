@@ -61,12 +61,12 @@ namespace LogBook
 
             this.Controls.AddRange(students);
 
-            iconPen.Image = Properties.Resources.pen;
-            iconPen.SizeMode = PictureBoxSizeMode.StretchImage;
+            //iconPen.Image = Properties.Resources.pencil;
+            //iconPen.SizeMode = PictureBoxSizeMode.StretchImage;
 
             totalCrystal.BackgroundImageLayout = ImageLayout.Stretch;
             totalCrystal.BackColor = Color.Azure;
-            totalCrystal.BackgroundImage = Properties.Resources.crystal;
+            //totalCrystal.BackgroundImage = Properties.Resources.crystal;
 
         }
 
@@ -95,12 +95,9 @@ namespace LogBook
 
         private void iconPen_Click(object sender, EventArgs e)
         {
-            TextBox textBox = new TextBox();
-            textBox.Size = new Size(50, 30);
-            textBox.Location = iconPen.Location;
-            //textBox.Location = iconPen.Location.X + 50;
-            //textBox.
-            this.Controls.Add(textBox);
+            subject.Enabled = true;
+            
         }
+
     }
 }
