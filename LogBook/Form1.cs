@@ -12,6 +12,9 @@ namespace LogBook
 {
     public partial class LogBook : Form
     {
+        public Student[] Students { get => students; set => students = value; }
+        public string TotalCrystal { get => labelTotalCrystal.Text; set => labelTotalCrystal.Text = value; }
+
         public LogBook()
         {
             InitializeComponent();
@@ -19,16 +22,16 @@ namespace LogBook
 
         private void LogBook_Load(object sender, EventArgs e)
         {
-            Student[] students = new Student[8]
+            Students = new Student[8]
             {
-                new Student{Fullname = "Abdullabayli Saleh", LastSeen = "21.01.2019", Absent = true, Top = 160},
-                new Student{Fullname = "Ahmadov Anar", LastSeen = "20.01.2019", Absent = true,Top = 225},
-                new Student{Fullname = "Jamalzade Elvin", LastSeen = "20.01.2019", Absent = true,Top = 290},
-                new Student{Fullname = "Mustafayev Nurullah", LastSeen = "20.01.2019", Absent = true,Top = 355},
-                new Student{Fullname = "Mustafayev Tural", LastSeen = "20.01.2019", Absent = true,Top = 420},
-                new Student{Fullname = "Naghiyev Elshan", LastSeen = "20.01.2019", Absent = true,Top = 485},
-                new Student{Fullname = "Omarov Islam", LastSeen = "20.01.2019", Absent = true,Top = 550},
-                new Student{Fullname = "Osmanov Samir", LastSeen = "20.01.2019", Absent = true,Top = 615}
+                new Student(this){Fullname = "Abdullabayli Saleh", LastSeen = "21.01.2019", Absent = true, Top = 160},
+                new Student(this){Fullname = "Ahmadov Anar", LastSeen = "20.01.2019", Absent = true,Top = 225},
+                new Student(this){Fullname = "Jamalzade Elvin", LastSeen = "20.01.2019", Absent = true,Top = 290},
+                new Student(this){Fullname = "Mustafayev Nurullah", LastSeen = "20.01.2019", Absent = true,Top = 355},
+                new Student(this){Fullname = "Mustafayev Tural", LastSeen = "20.01.2019", Absent = true,Top = 420},
+                new Student(this){Fullname = "Naghiyev Elshan", LastSeen = "20.01.2019", Absent = true,Top = 485},
+                new Student(this){Fullname = "Omarov Islam", LastSeen = "20.01.2019", Absent = true,Top = 550},
+                new Student(this){Fullname = "Osmanov Samir", LastSeen = "20.01.2019", Absent = true,Top = 615}
             };
 
             for (int i = 0; i < students.Count(); i++)
@@ -52,8 +55,8 @@ namespace LogBook
             label7.ForeColor = Color.FromArgb(154, 199, 227);
             label8.BackColor = Color.FromArgb(227, 245, 255);
             label8.ForeColor = Color.FromArgb(154, 199, 227);
-            label6.BackColor = Color.FromArgb(227, 245, 255);
-            label6.ForeColor = Color.FromArgb(154, 199, 227);
+            labelTotalCrystal.BackColor = Color.FromArgb(227, 245, 255);
+            labelTotalCrystal.ForeColor = Color.FromArgb(154, 199, 227);
             signAll.BackColor = Color.FromArgb(227, 245, 255);
 
             this.Controls.AddRange(students);
@@ -61,15 +64,32 @@ namespace LogBook
             iconPen.Image = Properties.Resources.pen;
             iconPen.SizeMode = PictureBoxSizeMode.StretchImage;
 
+            totalCrystal.BackgroundImageLayout = ImageLayout.Stretch;
+            totalCrystal.BackColor = Color.Azure;
+            totalCrystal.BackgroundImage = Properties.Resources.crystal;
+
         }
 
-        private void signAll_CheckedChanged(object sender, EventArgs e)
+        private void SignAll_CheckedChanged(object sender, EventArgs e)
         {
-            //foreach (var student in this.Controls.Find("Student", true) as Student[])
-            //{
-            //    student = new Student();
-            //    student.Participates = true;
-            //}
+            if (signAll.Checked)
+            {
+                for (int i = 0; i < Students.Count(); i++)
+                {
+                    Students[i].OneCrystal = new PictureBox();
+                    Students[i].TwoCrystal = new PictureBox();
+                    Students[i].ThreeCrystal = new PictureBox();
+                    Students[i].Xicon = new PictureBox();
+                    Students[i].CommentForStudent = new PictureBox();
+                    Students[i].Participates = true;
+                    Students[i].OneCrystal.Enabled = true;
+                    Students[i].TwoCrystal.Enabled = true;
+                    Students[i].ThreeCrystal.Enabled = true;
+                    Students[i].Xicon.Enabled = true;
+                    Students[i].CommentForStudent.Enabled = true;
+                    
+                }
+            }
 
         }
 

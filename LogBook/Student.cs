@@ -23,9 +23,13 @@ namespace LogBook
         public PictureBox TwoCrystal { get; set; }
         public PictureBox ThreeCrystal { get; set; }
         public int NumberStudent { get => int.Parse(numberStudent.Text) ; set => numberStudent.Text = value.ToString(); }
+        public PictureBox Xicon{ get => xIcon; set => xIcon = value; }
+        public PictureBox CommentForStudent { get => commentForStudent; set => commentForStudent = value; }
+        LogBook logBook;
 
-        public Student()
+        public Student(LogBook logbook)
         {
+            logBook = logbook;
             InitializeComponent();
         }
 
@@ -37,8 +41,23 @@ namespace LogBook
             controlWorkMark.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
             practiceWorkMark.Items.AddRange(new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 });
 
-            studentPhoto.Image = Properties.Resources.user;
+            studentPhoto.Image = Properties.Resources.person;
             studentPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            commentForStudent.Image = Properties.Resources.comment;
+            commentForStudent.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            oneCrystal.Image = Properties.Resources.enabledcrystal;
+            oneCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            twoCrystal.Image = Properties.Resources.enabledcrystal;
+            twoCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            threeCrystal.Image = Properties.Resources.enabledcrystal;
+            threeCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            xIcon.Image = Properties.Resources.xicon;
+            xIcon.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void ParticipatesOrDelayed_CheckedChanged(object sender, EventArgs e)
@@ -62,6 +81,27 @@ namespace LogBook
                 controlWorkMark.SelectedItem = null;
                 practiceWorkMark.SelectedItem = null;
             }           
+        }
+
+        private void oneCrystal_Click(object sender, EventArgs e)
+        {
+            logBook.TotalCrystal = "1";
+            oneCrystal.Image = Properties.Resources.crystal;
+            oneCrystal.SizeMode = PictureBoxSizeMode.StretchImage;           
+        }
+
+        private void twoCrystal_Click(object sender, EventArgs e)
+        {
+            logBook.TotalCrystal = "2";
+            twoCrystal.Image = Properties.Resources.crystal;
+            twoCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void threeCrystal_Click(object sender, EventArgs e)
+        {
+            logBook.TotalCrystal = "3";
+            threeCrystal.Image = Properties.Resources.crystal;
+            threeCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
 }

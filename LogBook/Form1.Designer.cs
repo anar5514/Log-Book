@@ -34,19 +34,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelTotalCrystal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.signAll = new MetroFramework.Controls.MetroRadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
+            this.baseTeacher = new MetroFramework.Controls.MetroRadioButton();
+            this.secondTeacher = new MetroFramework.Controls.MetroRadioButton();
             this.labelTotalSubject = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.iconPen = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.totalCrystal = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconPen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalCrystal)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -101,16 +103,14 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Mystat\'a daxil olub";
             // 
-            // label6
+            // labelTotalCrystal
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Azure;
-            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(1209, 117);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Kristal";
+            this.labelTotalCrystal.BackColor = System.Drawing.Color.Azure;
+            this.labelTotalCrystal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelTotalCrystal.Location = new System.Drawing.Point(1226, 117);
+            this.labelTotalCrystal.Name = "labelTotalCrystal";
+            this.labelTotalCrystal.Size = new System.Drawing.Size(18, 26);
+            this.labelTotalCrystal.TabIndex = 5;
             // 
             // label7
             // 
@@ -128,7 +128,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Azure;
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(1325, 117);
+            this.label8.Location = new System.Drawing.Point(1343, 117);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 13);
             this.label8.TabIndex = 7;
@@ -149,7 +149,6 @@
             this.signAll.Name = "signAll";
             this.signAll.Size = new System.Drawing.Size(26, 15);
             this.signAll.TabIndex = 16;
-            this.signAll.TabStop = true;
             this.signAll.Text = " ";
             this.signAll.UseVisualStyleBackColor = true;
             // 
@@ -163,29 +162,27 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "FSDE_1814_az";
             // 
-            // metroRadioButton1
+            // baseTeacher
             // 
-            this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(21, 60);
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(98, 15);
-            this.metroRadioButton1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroRadioButton1.TabIndex = 18;
-            this.metroRadioButton1.TabStop = true;
-            this.metroRadioButton1.Text = " Əsas müəllim";
-            this.metroRadioButton1.UseVisualStyleBackColor = true;
+            this.baseTeacher.AutoSize = true;
+            this.baseTeacher.Location = new System.Drawing.Point(21, 60);
+            this.baseTeacher.Name = "baseTeacher";
+            this.baseTeacher.Size = new System.Drawing.Size(98, 15);
+            this.baseTeacher.Style = MetroFramework.MetroColorStyle.Blue;
+            this.baseTeacher.TabIndex = 18;
+            this.baseTeacher.Text = " Əsas müəllim";
+            this.baseTeacher.UseVisualStyleBackColor = true;
             // 
-            // metroRadioButton2
+            // secondTeacher
             // 
-            this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(125, 60);
-            this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(134, 15);
-            this.metroRadioButton2.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroRadioButton2.TabIndex = 19;
-            this.metroRadioButton2.TabStop = true;
-            this.metroRadioButton2.Text = " Müəllim əvəz olunur";
-            this.metroRadioButton2.UseVisualStyleBackColor = true;
+            this.secondTeacher.AutoSize = true;
+            this.secondTeacher.Location = new System.Drawing.Point(125, 60);
+            this.secondTeacher.Name = "secondTeacher";
+            this.secondTeacher.Size = new System.Drawing.Size(134, 15);
+            this.secondTeacher.Style = MetroFramework.MetroColorStyle.Blue;
+            this.secondTeacher.TabIndex = 19;
+            this.secondTeacher.Text = " Müəllim əvəz olunur";
+            this.secondTeacher.UseVisualStyleBackColor = true;
             // 
             // labelTotalSubject
             // 
@@ -210,14 +207,23 @@
             // 
             // iconPen
             // 
-            this.iconPen.Image = global::LogBook.Properties.Resources.pen;
             this.iconPen.Location = new System.Drawing.Point(816, 48);
             this.iconPen.Name = "iconPen";
             this.iconPen.Size = new System.Drawing.Size(24, 24);
-            this.iconPen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.iconPen.TabIndex = 22;
             this.iconPen.TabStop = false;
             this.iconPen.Click += new System.EventHandler(this.iconPen_Click);
+            // 
+            // totalCrystal
+            // 
+            this.totalCrystal.BackColor = System.Drawing.Color.Azure;
+            this.totalCrystal.Location = new System.Drawing.Point(1250, 117);
+            this.totalCrystal.Name = "totalCrystal";
+            this.totalCrystal.Size = new System.Drawing.Size(29, 26);
+            this.totalCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.totalCrystal.TabIndex = 23;
+            this.totalCrystal.TabStop = false;
             // 
             // LogBook
             // 
@@ -225,16 +231,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1408, 730);
+            this.Controls.Add(this.totalCrystal);
             this.Controls.Add(this.iconPen);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelTotalSubject);
-            this.Controls.Add(this.metroRadioButton2);
-            this.Controls.Add(this.metroRadioButton1);
+            this.Controls.Add(this.secondTeacher);
+            this.Controls.Add(this.baseTeacher);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.signAll);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelTotalCrystal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -244,6 +251,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LogBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalCrystal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,23 +259,25 @@
 
         #endregion
 
+        private Student[] students;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelTotalCrystal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroRadioButton signAll;
         private System.Windows.Forms.Label label9;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
+        private MetroFramework.Controls.MetroRadioButton baseTeacher;
+        private MetroFramework.Controls.MetroRadioButton secondTeacher;
         private System.Windows.Forms.Label labelTotalSubject;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox iconPen;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox totalCrystal;
     }
 }
 

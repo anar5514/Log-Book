@@ -101,13 +101,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\user.png" />
-    <None Include="bin\Debug\pen.png" />
-    <None Include="bin\Debug\comment.PNG" />
-    <Content Include="MetroFramework.txt" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="bin\Debug\enabledcrystal.png" />
+    <None Include="bin\Debug\comment.PNG" />
+    <None Include="bin\Debug\xicon.png" />
+    <None Include="bin\Debug\crystal.jpg" />
+    <None Include="bin\Debug\person.png" />
+    <None Include="bin\Debug\pen.png" />
+    <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
