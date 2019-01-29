@@ -14,9 +14,9 @@ namespace LogBook
     {
         public string Fullname { get => studentName.Text; set => studentName.Text = value; }
         public string LastSeen { get => lastSeen.Text; set => lastSeen.Text = value; }
-        public bool Participates { get => participates.Checked; set => participates.Checked = value; }
-        public bool Delayed { get => delayed.Checked; set => delayed.Checked = value; }
-        public bool Absent { get => absent.Checked; set => absent.Checked = value; }
+        public MetroFramework.Controls.MetroRadioButton Participates { get => participates; set => participates= value; }
+        public MetroFramework.Controls.MetroRadioButton Delayed { get => delayed; set => delayed = value; }
+        public MetroFramework.Controls.MetroRadioButton Absent { get => absent; set => absent = value; }
         public bool ControlWorkMark { get => controlWorkMark.Enabled; set => controlWorkMark.Enabled = value; }
         public bool PracticeWorkMark { get => practiceWorkMark.Enabled; set => practiceWorkMark.Enabled = value; }
         public PictureBox OneCrystal { get; set; }

@@ -24,18 +24,19 @@ namespace LogBook
         {
             Students = new Student[8]
             {
-                new Student(this){Fullname = "Abdullabayli Saleh", LastSeen = "21.01.2019", Absent = true, Top = 160},
-                new Student(this){Fullname = "Ahmadov Anar", LastSeen = "20.01.2019", Absent = true,Top = 225},
-                new Student(this){Fullname = "Jamalzade Elvin", LastSeen = "20.01.2019", Absent = true,Top = 290},
-                new Student(this){Fullname = "Mustafayev Nurullah", LastSeen = "20.01.2019", Absent = true,Top = 355},
-                new Student(this){Fullname = "Mustafayev Tural", LastSeen = "20.01.2019", Absent = true,Top = 420},
-                new Student(this){Fullname = "Naghiyev Elshan", LastSeen = "20.01.2019", Absent = true,Top = 485},
-                new Student(this){Fullname = "Omarov Islam", LastSeen = "20.01.2019", Absent = true,Top = 550},
-                new Student(this){Fullname = "Osmanov Samir", LastSeen = "20.01.2019", Absent = true,Top = 615}
+                new Student(this){Fullname = "Abdullabayli Saleh", LastSeen = "21.01.2019", Top = 160},
+                new Student(this){Fullname = "Ahmadov Anar", LastSeen = "20.01.2019", Top = 225},
+                new Student(this){Fullname = "Jamalzade Elvin", LastSeen = "20.01.2019", Top = 290},
+                new Student(this){Fullname = "Mustafayev Nurullah", LastSeen = "20.01.2019", Top = 355},
+                new Student(this){Fullname = "Mustafayev Tural", LastSeen = "20.01.2019", Top = 420},
+                new Student(this){Fullname = "Naghiyev Elshan", LastSeen = "20.01.2019", Top = 485},
+                new Student(this){Fullname = "Omarov Islam", LastSeen = "20.01.2019", Top = 550},
+                new Student(this){Fullname = "Osmanov Samir", LastSeen = "20.01.2019", Top = 615}
             };
 
             for (int i = 0; i < students.Count(); i++)
             {
+                students[i].Absent.Checked = true;
                 students[i].ControlWorkMark = false;
                 students[i].PracticeWorkMark = false;
                 students[i].NumberStudent = i + 1;
@@ -61,13 +62,6 @@ namespace LogBook
 
             this.Controls.AddRange(students);
 
-            //iconPen.Image = Properties.Resources.pencil;
-            //iconPen.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            totalCrystal.BackgroundImageLayout = ImageLayout.Stretch;
-            totalCrystal.BackColor = Color.Azure;
-            //totalCrystal.BackgroundImage = Properties.Resources.crystal;
-
         }
 
         private void SignAll_CheckedChanged(object sender, EventArgs e)
@@ -81,7 +75,7 @@ namespace LogBook
                     Students[i].ThreeCrystal = new PictureBox();
                     Students[i].Xicon = new PictureBox();
                     Students[i].CommentForStudent = new PictureBox();
-                    Students[i].Participates = true;
+                    Students[i].Participates.Checked = true;
                     Students[i].OneCrystal.Enabled = true;
                     Students[i].TwoCrystal.Enabled = true;
                     Students[i].ThreeCrystal.Enabled = true;
@@ -99,5 +93,29 @@ namespace LogBook
             
         }
 
+        private void subject_TextChanged(object sender, EventArgs e)
+        {
+            if (subject.Text != string.Empty)
+            {
+                signAll.Enabled = true;
+                foreach (var student in Students)
+                {
+                    student.Participates.Enabled = true;
+                    student.Delayed.Enabled = true;
+                    student.Absent.Enabled = true;
+                }
+            }
+            else
+            {
+                signAll.Enabled = false;
+                foreach (var student in Students)
+                {
+                    student.Participates.Enabled = false;
+                    student.Delayed.Enabled = false;
+                    student.Absent.Enabled = false;
+                }
+            }
+
+        }
     }
 }

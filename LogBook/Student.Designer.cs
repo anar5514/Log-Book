@@ -56,6 +56,7 @@
             this.absent.AutoSize = true;
             this.absent.BackColor = System.Drawing.SystemColors.Window;
             this.absent.CustomBackground = true;
+            this.absent.Enabled = false;
             this.absent.Location = new System.Drawing.Point(665, 29);
             this.absent.Name = "absent";
             this.absent.Size = new System.Drawing.Size(26, 15);
@@ -71,6 +72,7 @@
             this.delayed.AutoSize = true;
             this.delayed.BackColor = System.Drawing.SystemColors.Window;
             this.delayed.CustomBackground = true;
+            this.delayed.Enabled = false;
             this.delayed.Location = new System.Drawing.Point(633, 29);
             this.delayed.Name = "delayed";
             this.delayed.Size = new System.Drawing.Size(26, 15);
@@ -85,6 +87,7 @@
             this.participates.AutoSize = true;
             this.participates.BackColor = System.Drawing.SystemColors.Window;
             this.participates.CustomBackground = true;
+            this.participates.Enabled = false;
             this.participates.Location = new System.Drawing.Point(601, 29);
             this.participates.Name = "participates";
             this.participates.Size = new System.Drawing.Size(26, 15);
@@ -185,6 +188,7 @@
             // 
             this.commentForStudent.Enabled = false;
             this.commentForStudent.ErrorImage = null;
+            this.commentForStudent.Image = ((System.Drawing.Image)(resources.GetObject("commentForStudent.Image")));
             this.commentForStudent.InitialImage = null;
             this.commentForStudent.Location = new System.Drawing.Point(1342, 18);
             this.commentForStudent.Name = "commentForStudent";

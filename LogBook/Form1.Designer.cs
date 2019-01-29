@@ -139,6 +139,7 @@
             // 
             this.signAll.AutoSize = true;
             this.signAll.CustomBackground = true;
+            this.signAll.Enabled = false;
             this.signAll.Location = new System.Drawing.Point(632, 130);
             this.signAll.Name = "signAll";
             this.signAll.Size = new System.Drawing.Size(26, 15);
@@ -213,7 +214,7 @@
             // 
             // totalCrystal
             // 
-            this.totalCrystal.BackColor = System.Drawing.Color.Azure;
+            this.totalCrystal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.totalCrystal.Image = ((System.Drawing.Image)(resources.GetObject("totalCrystal.Image")));
             this.totalCrystal.Location = new System.Drawing.Point(1250, 117);
             this.totalCrystal.Name = "totalCrystal";
@@ -224,13 +225,16 @@
             // 
             // subject
             // 
+            this.subject.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.subject.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.subject.Enabled = false;
-            this.subject.Location = new System.Drawing.Point(815, 38);
+            this.subject.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subject.Location = new System.Drawing.Point(815, 48);
             this.subject.Name = "subject";
-            this.subject.Size = new System.Drawing.Size(120, 37);
+            this.subject.Size = new System.Drawing.Size(120, 27);
             this.subject.TabIndex = 24;
             this.subject.Text = "";
+            this.subject.TextChanged += new System.EventHandler(this.subject_TextChanged);
             // 
             // LogBook
             // 
@@ -276,7 +280,6 @@
         private System.Windows.Forms.Label labelTotalCrystal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        //private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroRadioButton signAll;
         private System.Windows.Forms.Label label9;
         private MetroFramework.Controls.MetroRadioButton baseTeacher;
