@@ -102,10 +102,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MetroFramework.txt" />
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Debug\" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\crystal.jpg" />
+    <None Include="Resources\beforecrystal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

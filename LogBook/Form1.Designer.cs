@@ -38,18 +38,19 @@
             this.labelTotalCrystal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.signAll = new MetroFramework.Controls.MetroRadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.baseTeacher = new MetroFramework.Controls.MetroRadioButton();
             this.secondTeacher = new MetroFramework.Controls.MetroRadioButton();
             this.labelTotalSubject = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.iconPen = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.totalCrystal = new System.Windows.Forms.PictureBox();
             this.subject = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPen)).BeginInit();
+            this.signAll = new MetroFramework.Controls.MetroRadioButton();
+            this.totalCrystal = new System.Windows.Forms.PictureBox();
+            this.iconPen = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.totalCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -135,19 +136,6 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Rəy";
             // 
-            // signAll
-            // 
-            this.signAll.AutoSize = true;
-            this.signAll.CustomBackground = true;
-            this.signAll.Enabled = false;
-            this.signAll.Location = new System.Drawing.Point(632, 130);
-            this.signAll.Name = "signAll";
-            this.signAll.Size = new System.Drawing.Size(26, 15);
-            this.signAll.TabIndex = 16;
-            this.signAll.Text = " ";
-            this.signAll.UseVisualStyleBackColor = true;
-            this.signAll.CheckedChanged += new System.EventHandler(this.SignAll_CheckedChanged);
-            // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,28 +189,6 @@
             this.label10.Text = "Dərsin mövzusu";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // iconPen
-            // 
-            this.iconPen.Image = ((System.Drawing.Image)(resources.GetObject("iconPen.Image")));
-            this.iconPen.Location = new System.Drawing.Point(941, 48);
-            this.iconPen.Name = "iconPen";
-            this.iconPen.Size = new System.Drawing.Size(24, 24);
-            this.iconPen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconPen.TabIndex = 22;
-            this.iconPen.TabStop = false;
-            this.iconPen.Click += new System.EventHandler(this.iconPen_Click);
-            // 
-            // totalCrystal
-            // 
-            this.totalCrystal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.totalCrystal.Image = ((System.Drawing.Image)(resources.GetObject("totalCrystal.Image")));
-            this.totalCrystal.Location = new System.Drawing.Point(1250, 117);
-            this.totalCrystal.Name = "totalCrystal";
-            this.totalCrystal.Size = new System.Drawing.Size(29, 26);
-            this.totalCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.totalCrystal.TabIndex = 23;
-            this.totalCrystal.TabStop = false;
-            // 
             // subject
             // 
             this.subject.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -236,12 +202,57 @@
             this.subject.Text = "";
             this.subject.TextChanged += new System.EventHandler(this.subject_TextChanged);
             // 
+            // signAll
+            // 
+            this.signAll.AutoSize = true;
+            this.signAll.CustomBackground = true;
+            this.signAll.Enabled = false;
+            this.signAll.Location = new System.Drawing.Point(632, 130);
+            this.signAll.Name = "signAll";
+            this.signAll.Size = new System.Drawing.Size(26, 15);
+            this.signAll.TabIndex = 16;
+            this.signAll.Text = " ";
+            this.signAll.UseVisualStyleBackColor = true;
+            this.signAll.CheckedChanged += new System.EventHandler(this.SignAll_CheckedChanged);
+            // 
+            // totalCrystal
+            // 
+            this.totalCrystal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.totalCrystal.Image = ((System.Drawing.Image)(resources.GetObject("totalCrystal.Image")));
+            this.totalCrystal.Location = new System.Drawing.Point(1250, 117);
+            this.totalCrystal.Name = "totalCrystal";
+            this.totalCrystal.Size = new System.Drawing.Size(29, 26);
+            this.totalCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.totalCrystal.TabIndex = 23;
+            this.totalCrystal.TabStop = false;
+            // 
+            // iconPen
+            // 
+            this.iconPen.Image = ((System.Drawing.Image)(resources.GetObject("iconPen.Image")));
+            this.iconPen.Location = new System.Drawing.Point(941, 48);
+            this.iconPen.Name = "iconPen";
+            this.iconPen.Size = new System.Drawing.Size(24, 24);
+            this.iconPen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPen.TabIndex = 22;
+            this.iconPen.TabStop = false;
+            this.iconPen.Click += new System.EventHandler(this.iconPen_Click);
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label6.Location = new System.Drawing.Point(1213, 117);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 26);
+            this.label6.TabIndex = 25;
+            // 
             // LogBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1408, 686);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.subject);
             this.Controls.Add(this.totalCrystal);
             this.Controls.Add(this.iconPen);
@@ -262,8 +273,8 @@
             this.Name = "LogBook";
             this.Text = "Log Book";
             this.Load += new System.EventHandler(this.LogBook_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +301,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox totalCrystal;
         private System.Windows.Forms.RichTextBox subject;
+        private System.Windows.Forms.Label label6;
     }
 }
 

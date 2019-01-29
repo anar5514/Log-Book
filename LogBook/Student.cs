@@ -83,24 +83,33 @@ namespace LogBook
             }           
         }
 
-        private void oneCrystal_Click(object sender, EventArgs e)
+        private void oneCrystal_MouseClick(object sender, MouseEventArgs e)
         {
-            logBook.TotalCrystal = "1";
-            //oneCrystal.Image = Properties.Resources.crystal;
-            oneCrystal.SizeMode = PictureBoxSizeMode.StretchImage;           
+            
         }
 
-        private void twoCrystal_Click(object sender, EventArgs e)
+        private void twoCrystal_MouseClick(object sender, MouseEventArgs e)
         {
-            logBook.TotalCrystal = "2";
-            //twoCrystal.Image = Properties.Resources.crystal;
+            twoCrystal.Image = Properties.Resources.crystal;
             twoCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-        private void threeCrystal_Click(object sender, EventArgs e)
+
+        private void oneCrystal_MouseClick_1(object sender, MouseEventArgs e)
         {
-            logBook.TotalCrystal = "3";
-            //threeCrystal.Image = Properties.Resources.crystal;
+            oneCrystal.Image = Properties.Resources.crystal;
+            oneCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void twoCrystal_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            twoCrystal.Image = Properties.Resources.crystal;
+            twoCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void threeCrystal_MouseClick(object sender, MouseEventArgs e)
+        {
+            threeCrystal.Image = Properties.Resources.crystal;
             threeCrystal.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
