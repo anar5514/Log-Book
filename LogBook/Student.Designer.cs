@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
             this.absent = new MetroFramework.Controls.MetroRadioButton();
             this.delayed = new MetroFramework.Controls.MetroRadioButton();
@@ -36,19 +37,20 @@
             this.practiceWorkMark = new MetroFramework.Controls.MetroComboBox();
             this.controlWorkMark = new MetroFramework.Controls.MetroComboBox();
             this.lastSeen = new System.Windows.Forms.Label();
-            this.numberStudent = new System.Windows.Forms.Label();
-            this.xIcon = new System.Windows.Forms.PictureBox();
-            this.commentForStudent = new System.Windows.Forms.PictureBox();
-            this.threeCrystal = new System.Windows.Forms.PictureBox();
-            this.twoCrystal = new System.Windows.Forms.PictureBox();
-            this.oneCrystal = new System.Windows.Forms.PictureBox();
             this.studentPhoto = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.xIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commentForStudent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.threeCrystal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.twoCrystal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.oneCrystal)).BeginInit();
+            this.oneCrystal = new System.Windows.Forms.PictureBox();
+            this.twoCrystal = new System.Windows.Forms.PictureBox();
+            this.threeCrystal = new System.Windows.Forms.PictureBox();
+            this.numberStudent = new System.Windows.Forms.Label();
+            this.commentForStudent = new System.Windows.Forms.PictureBox();
+            this.xIcon = new System.Windows.Forms.PictureBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.studentPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oneCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twoCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threeCrystal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commentForStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // absent
@@ -99,7 +101,7 @@
             // 
             // studentName
             // 
-            this.studentName.Location = new System.Drawing.Point(85, 23);
+            this.studentName.Location = new System.Drawing.Point(85, 24);
             this.studentName.Name = "studentName";
             this.studentName.Size = new System.Drawing.Size(158, 23);
             this.studentName.TabIndex = 64;
@@ -134,84 +136,9 @@
             this.lastSeen.TabIndex = 61;
             this.lastSeen.Text = "21.05.2019";
             // 
-            // numberStudent
-            // 
-            this.numberStudent.Location = new System.Drawing.Point(3, 23);
-            this.numberStudent.Name = "numberStudent";
-            this.numberStudent.Size = new System.Drawing.Size(35, 23);
-            this.numberStudent.TabIndex = 72;
-            this.numberStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // xIcon
-            // 
-            this.xIcon.Enabled = false;
-            this.xIcon.ErrorImage = null;
-            this.xIcon.Image = ((System.Drawing.Image)(resources.GetObject("xIcon.Image")));
-            this.xIcon.InitialImage = null;
-            this.xIcon.Location = new System.Drawing.Point(1280, 19);
-            this.xIcon.Name = "xIcon";
-            this.xIcon.Size = new System.Drawing.Size(25, 24);
-            this.xIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.xIcon.TabIndex = 74;
-            this.xIcon.TabStop = false;
-            // 
-            // commentForStudent
-            // 
-            this.commentForStudent.Enabled = false;
-            this.commentForStudent.ErrorImage = null;
-            this.commentForStudent.Image = ((System.Drawing.Image)(resources.GetObject("commentForStudent.Image")));
-            this.commentForStudent.InitialImage = null;
-            this.commentForStudent.Location = new System.Drawing.Point(1334, 17);
-            this.commentForStudent.Name = "commentForStudent";
-            this.commentForStudent.Size = new System.Drawing.Size(46, 27);
-            this.commentForStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.commentForStudent.TabIndex = 73;
-            this.commentForStudent.TabStop = false;
-            // 
-            // threeCrystal
-            // 
-            this.threeCrystal.Enabled = false;
-            this.threeCrystal.ErrorImage = null;
-            this.threeCrystal.Image = global::LogBook.Properties.Resources.beforecrystal;
-            this.threeCrystal.InitialImage = null;
-            this.threeCrystal.Location = new System.Drawing.Point(1249, 19);
-            this.threeCrystal.Name = "threeCrystal";
-            this.threeCrystal.Size = new System.Drawing.Size(25, 24);
-            this.threeCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.threeCrystal.TabIndex = 71;
-            this.threeCrystal.TabStop = false;
-            this.threeCrystal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.threeCrystal_MouseClick);
-            // 
-            // twoCrystal
-            // 
-            this.twoCrystal.Enabled = false;
-            this.twoCrystal.ErrorImage = null;
-            this.twoCrystal.Image = global::LogBook.Properties.Resources.beforecrystal;
-            this.twoCrystal.InitialImage = null;
-            this.twoCrystal.Location = new System.Drawing.Point(1218, 19);
-            this.twoCrystal.Name = "twoCrystal";
-            this.twoCrystal.Size = new System.Drawing.Size(25, 24);
-            this.twoCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.twoCrystal.TabIndex = 70;
-            this.twoCrystal.TabStop = false;
-            this.twoCrystal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.twoCrystal_MouseClick_1);
-            // 
-            // oneCrystal
-            // 
-            this.oneCrystal.Enabled = false;
-            this.oneCrystal.ErrorImage = null;
-            this.oneCrystal.Image = global::LogBook.Properties.Resources.beforecrystal;
-            this.oneCrystal.InitialImage = null;
-            this.oneCrystal.Location = new System.Drawing.Point(1187, 19);
-            this.oneCrystal.Name = "oneCrystal";
-            this.oneCrystal.Size = new System.Drawing.Size(25, 24);
-            this.oneCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.oneCrystal.TabIndex = 69;
-            this.oneCrystal.TabStop = false;
-            this.oneCrystal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oneCrystal_MouseClick_1);
-            // 
             // studentPhoto
             // 
+            this.studentPhoto.Cursor = System.Windows.Forms.Cursors.Default;
             this.studentPhoto.Image = ((System.Drawing.Image)(resources.GetObject("studentPhoto.Image")));
             this.studentPhoto.InitialImage = null;
             this.studentPhoto.Location = new System.Drawing.Point(44, 19);
@@ -220,6 +147,91 @@
             this.studentPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.studentPhoto.TabIndex = 68;
             this.studentPhoto.TabStop = false;
+            this.studentPhoto.MouseEnter += new System.EventHandler(this.studentPhoto_MouseEnter);
+            this.studentPhoto.MouseLeave += new System.EventHandler(this.studentPhoto_MouseLeave);
+            // 
+            // oneCrystal
+            // 
+            this.oneCrystal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.oneCrystal.Enabled = false;
+            this.oneCrystal.ErrorImage = null;
+            this.oneCrystal.Image = global::LogBook.Properties.Resources.beforecrystal;
+            this.oneCrystal.InitialImage = null;
+            this.oneCrystal.Location = new System.Drawing.Point(1191, 24);
+            this.oneCrystal.Name = "oneCrystal";
+            this.oneCrystal.Size = new System.Drawing.Size(20, 20);
+            this.oneCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.oneCrystal.TabIndex = 69;
+            this.oneCrystal.TabStop = false;
+            this.oneCrystal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oneCrystal_MouseClick);
+            // 
+            // twoCrystal
+            // 
+            this.twoCrystal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.twoCrystal.Enabled = false;
+            this.twoCrystal.ErrorImage = null;
+            this.twoCrystal.Image = global::LogBook.Properties.Resources.beforecrystal;
+            this.twoCrystal.InitialImage = null;
+            this.twoCrystal.Location = new System.Drawing.Point(1217, 24);
+            this.twoCrystal.Name = "twoCrystal";
+            this.twoCrystal.Size = new System.Drawing.Size(20, 20);
+            this.twoCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.twoCrystal.TabIndex = 70;
+            this.twoCrystal.TabStop = false;
+            this.twoCrystal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.twoCrystal_MouseClick);
+            // 
+            // threeCrystal
+            // 
+            this.threeCrystal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.threeCrystal.Enabled = false;
+            this.threeCrystal.ErrorImage = null;
+            this.threeCrystal.Image = global::LogBook.Properties.Resources.beforecrystal;
+            this.threeCrystal.InitialImage = null;
+            this.threeCrystal.Location = new System.Drawing.Point(1243, 24);
+            this.threeCrystal.Name = "threeCrystal";
+            this.threeCrystal.Size = new System.Drawing.Size(20, 20);
+            this.threeCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.threeCrystal.TabIndex = 71;
+            this.threeCrystal.TabStop = false;
+            this.threeCrystal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.threeCrystal_MouseClick);
+            // 
+            // numberStudent
+            // 
+            this.numberStudent.Location = new System.Drawing.Point(3, 23);
+            this.numberStudent.Name = "numberStudent";
+            this.numberStudent.Size = new System.Drawing.Size(35, 23);
+            this.numberStudent.TabIndex = 72;
+            this.numberStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // commentForStudent
+            // 
+            this.commentForStudent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.commentForStudent.Enabled = false;
+            this.commentForStudent.ErrorImage = null;
+            this.commentForStudent.Image = ((System.Drawing.Image)(resources.GetObject("commentForStudent.Image")));
+            this.commentForStudent.InitialImage = null;
+            this.commentForStudent.Location = new System.Drawing.Point(1337, 20);
+            this.commentForStudent.Name = "commentForStudent";
+            this.commentForStudent.Size = new System.Drawing.Size(40, 27);
+            this.commentForStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.commentForStudent.TabIndex = 73;
+            this.commentForStudent.TabStop = false;
+            this.commentForStudent.MouseClick += new System.Windows.Forms.MouseEventHandler(this.commentForStudent_MouseClick);
+            // 
+            // xIcon
+            // 
+            this.xIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.xIcon.Enabled = false;
+            this.xIcon.ErrorImage = null;
+            this.xIcon.Image = ((System.Drawing.Image)(resources.GetObject("xIcon.Image")));
+            this.xIcon.InitialImage = null;
+            this.xIcon.Location = new System.Drawing.Point(1269, 24);
+            this.xIcon.Name = "xIcon";
+            this.xIcon.Size = new System.Drawing.Size(20, 20);
+            this.xIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.xIcon.TabIndex = 74;
+            this.xIcon.TabStop = false;
+            this.xIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.xIcon_MouseClick);
             // 
             // Student
             // 
@@ -242,14 +254,14 @@
             this.Controls.Add(this.controlWorkMark);
             this.Controls.Add(this.lastSeen);
             this.Name = "Student";
-            this.Size = new System.Drawing.Size(1399, 64);
+            this.Size = new System.Drawing.Size(1422, 64);
             this.Load += new System.EventHandler(this.Student_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.xIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commentForStudent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.threeCrystal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.twoCrystal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.oneCrystal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oneCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twoCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threeCrystal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commentForStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +283,6 @@
         private System.Windows.Forms.Label numberStudent;
         private System.Windows.Forms.PictureBox commentForStudent;
         private System.Windows.Forms.PictureBox xIcon;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

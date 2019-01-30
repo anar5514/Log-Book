@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogBook));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,14 +42,15 @@
             this.secondTeacher = new MetroFramework.Controls.MetroRadioButton();
             this.labelTotalSubject = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.subject = new System.Windows.Forms.RichTextBox();
             this.signAll = new MetroFramework.Controls.MetroRadioButton();
             this.totalCrystal = new System.Windows.Forms.PictureBox();
             this.iconPen = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.totalCrystalCount = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.subject = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.totalCrystal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPen)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +58,7 @@
             this.label1.BackColor = System.Drawing.Color.Azure;
             this.label1.Location = new System.Drawing.Point(3, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1402, 61);
+            this.label1.Size = new System.Drawing.Size(1433, 61);
             this.label1.TabIndex = 0;
             // 
             // label2
@@ -130,7 +130,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Azure;
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(1343, 117);
+            this.label8.Location = new System.Drawing.Point(1344, 117);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 13);
             this.label8.TabIndex = 7;
@@ -149,7 +149,7 @@
             // baseTeacher
             // 
             this.baseTeacher.AutoSize = true;
-            this.baseTeacher.Location = new System.Drawing.Point(21, 60);
+            this.baseTeacher.Location = new System.Drawing.Point(6, 19);
             this.baseTeacher.Name = "baseTeacher";
             this.baseTeacher.Size = new System.Drawing.Size(98, 15);
             this.baseTeacher.Style = MetroFramework.MetroColorStyle.Blue;
@@ -160,7 +160,7 @@
             // secondTeacher
             // 
             this.secondTeacher.AutoSize = true;
-            this.secondTeacher.Location = new System.Drawing.Point(125, 60);
+            this.secondTeacher.Location = new System.Drawing.Point(120, 19);
             this.secondTeacher.Name = "secondTeacher";
             this.secondTeacher.Size = new System.Drawing.Size(134, 15);
             this.secondTeacher.Style = MetroFramework.MetroColorStyle.Blue;
@@ -189,19 +189,6 @@
             this.label10.Text = "Dərsin mövzusu";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // subject
-            // 
-            this.subject.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.subject.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.subject.Enabled = false;
-            this.subject.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subject.Location = new System.Drawing.Point(815, 48);
-            this.subject.Name = "subject";
-            this.subject.Size = new System.Drawing.Size(120, 27);
-            this.subject.TabIndex = 24;
-            this.subject.Text = "";
-            this.subject.TextChanged += new System.EventHandler(this.subject_TextChanged);
-            // 
             // signAll
             // 
             this.signAll.AutoSize = true;
@@ -219,7 +206,7 @@
             // 
             this.totalCrystal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.totalCrystal.Image = ((System.Drawing.Image)(resources.GetObject("totalCrystal.Image")));
-            this.totalCrystal.Location = new System.Drawing.Point(1250, 117);
+            this.totalCrystal.Location = new System.Drawing.Point(1240, 117);
             this.totalCrystal.Name = "totalCrystal";
             this.totalCrystal.Size = new System.Drawing.Size(29, 26);
             this.totalCrystal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -228,8 +215,9 @@
             // 
             // iconPen
             // 
+            this.iconPen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconPen.Image = ((System.Drawing.Image)(resources.GetObject("iconPen.Image")));
-            this.iconPen.Location = new System.Drawing.Point(941, 48);
+            this.iconPen.Location = new System.Drawing.Point(920, 51);
             this.iconPen.Name = "iconPen";
             this.iconPen.Size = new System.Drawing.Size(24, 24);
             this.iconPen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,29 +225,52 @@
             this.iconPen.TabStop = false;
             this.iconPen.Click += new System.EventHandler(this.iconPen_Click);
             // 
-            // label6
+            // totalCrystalCount
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(1213, 117);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 26);
-            this.label6.TabIndex = 25;
+            this.totalCrystalCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.totalCrystalCount.ForeColor = System.Drawing.Color.SteelBlue;
+            this.totalCrystalCount.Location = new System.Drawing.Point(1209, 117);
+            this.totalCrystalCount.Name = "totalCrystalCount";
+            this.totalCrystalCount.Size = new System.Drawing.Size(25, 26);
+            this.totalCrystalCount.TabIndex = 25;
+            this.totalCrystalCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.secondTeacher);
+            this.groupBox1.Controls.Add(this.baseTeacher);
+            this.groupBox1.Location = new System.Drawing.Point(12, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(261, 41);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            // 
+            // subject
+            // 
+            this.subject.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.subject.CustomBackground = true;
+            this.subject.Enabled = false;
+            this.subject.Location = new System.Drawing.Point(817, 48);
+            this.subject.Name = "subject";
+            this.subject.Size = new System.Drawing.Size(97, 30);
+            this.subject.TabIndex = 27;
+            this.subject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.subject.TextChanged += new System.EventHandler(this.subject_TextChanged);
+            this.subject.MouseLeave += new System.EventHandler(this.subject_MouseLeave);
             // 
             // LogBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1408, 686);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(1431, 686);
             this.Controls.Add(this.subject);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.totalCrystalCount);
             this.Controls.Add(this.totalCrystal);
             this.Controls.Add(this.iconPen);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelTotalSubject);
-            this.Controls.Add(this.secondTeacher);
-            this.Controls.Add(this.baseTeacher);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.signAll);
             this.Controls.Add(this.label8);
@@ -275,6 +286,8 @@
             this.Load += new System.EventHandler(this.LogBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.totalCrystal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPen)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,10 +311,10 @@
         private System.Windows.Forms.Label labelTotalSubject;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox iconPen;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox totalCrystal;
-        private System.Windows.Forms.RichTextBox subject;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label totalCrystalCount;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroTextBox subject;
     }
 }
 

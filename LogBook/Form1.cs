@@ -14,6 +14,8 @@ namespace LogBook
     {
         public Student[] Students { get => students; set => students = value; }
         public string TotalCrystal { get => labelTotalCrystal.Text; set => labelTotalCrystal.Text = value; }
+        public string TotalCrystalCountLabel { get => totalCrystalCount.Text; set => totalCrystalCount.Text = value; }
+        //public int TotalCrystalCount { get; set; }
 
         public LogBook()
         {
@@ -61,7 +63,6 @@ namespace LogBook
             signAll.BackColor = Color.FromArgb(227, 245, 255);
 
             this.Controls.AddRange(students);
-
         }
 
         private void SignAll_CheckedChanged(object sender, EventArgs e)
@@ -70,18 +71,12 @@ namespace LogBook
             {
                 for (int i = 0; i < Students.Count(); i++)
                 {
-                    Students[i].OneCrystal = new PictureBox();
-                    Students[i].TwoCrystal = new PictureBox();
-                    Students[i].ThreeCrystal = new PictureBox();
-                    Students[i].Xicon = new PictureBox();
-                    Students[i].CommentForStudent = new PictureBox();
                     Students[i].Participates.Checked = true;
                     Students[i].OneCrystal.Enabled = true;
                     Students[i].TwoCrystal.Enabled = true;
                     Students[i].ThreeCrystal.Enabled = true;
                     Students[i].Xicon.Enabled = true;
-                    Students[i].CommentForStudent.Enabled = true;
-                    
+                    Students[i].CommentForStudent.Enabled = true;                   
                 }
             }
 
@@ -89,8 +84,7 @@ namespace LogBook
 
         private void iconPen_Click(object sender, EventArgs e)
         {
-            subject.Enabled = true;
-            
+            subject.Enabled = true;         
         }
 
         private void subject_TextChanged(object sender, EventArgs e)
@@ -116,6 +110,27 @@ namespace LogBook
                 }
             }
 
+        }
+
+        private void subject_MouseLeave(object sender, EventArgs e)
+        {
+            if(subject.Text != string.Empty)
+            {
+                Label label = new Label();
+                label.Text = subject.Text;
+                subject.Visible = false;
+                label.Location = new Point(817, 48);
+                label.Font = new Font("Microsoft YaHei UI", 8, FontStyle.Regular);
+                label.Size = new Size(97, 30);
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.MouseEnter += Label_MouseEnter;
+                this.Controls.Add(label);
+            }
+        }
+
+        private void Label_MouseEnter(object sender, EventArgs e)
+        {
+            subject.Visible = true;
         }
     }
 }

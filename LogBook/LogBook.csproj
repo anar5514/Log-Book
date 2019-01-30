@@ -105,9 +105,11 @@
     <Folder Include="bin\Debug\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MetroFramework.txt" />
     <None Include="Resources\crystal.jpg" />
     <None Include="Resources\beforecrystal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
